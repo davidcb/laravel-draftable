@@ -1,0 +1,58 @@
+{
+    "name": "davidcb/laravel-draftable",
+    "description": "Drafts for Laravel models",
+    "keywords": [
+        "laravel",
+        "draftable",
+        "drafts",
+        "models",
+        "eloquent"
+    ],
+    "homepage": "https://github.com/davidcb/laravel-draftable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Couto",
+            "email": "davidcouto@gmail.com",
+            "role": "Full Stack Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/database": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^9.5",
+        "orchestra/testbench": "^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Davidcb\\LaravelDraftable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Davidcb\\LaravelDraftable\\Test\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Davidcb\\LaravelDraftable\\DraftableServiceProvider"
+            ]
+        }
+    }
+}
